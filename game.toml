@@ -6,7 +6,9 @@ name = "Destruction Derby 2"
 id = "SCUS-94350"
 players = 1
 exe = "disc/SCUS_943.50"
-disc = ""
+disc = "disc/Destruction Derby 2 (USA, Canada).cue"
+discs = ["disc/Destruction Derby 2 (USA, Canada).cue"]
+disc_serials = ["SCUS-94350"]
 load_address = "0x80010000"
 entry_pc = "0x800696E8"
 text_size = "0x0006A000"
@@ -15,29 +17,31 @@ stack_base = "0x801FFFF0"
 # Digests are for data Track 01 (first BINARY FILE / TRACK 01).
 [prepare_disc]
 out_dir = "disc"
-bin_name = "disc1.bin"
-cue_name = "disc1.cue"
+bin_name = "Destruction Derby 2 (USA, Canada) (Track 01).bin"
+cue_name = "Destruction Derby 2 (USA, Canada).cue"
 boot_exe = "SCUS_943.50"
-known_sizes = [650586720, 73330656]
+known_sizes = [73330656, 650586720]
 known_md5 = [
-  "cd25507707a6d157763c6fddbdbf51df",
   "c8e98530e2b1ddcf54e1ac2326ae8127",
+  "cd25507707a6d157763c6fddbdbf51df",
 ]
 known_sha1 = [
-  "21352c9271aa9a554e99055e4ec688fa665c40f1",
   "d52c60282b7ae07639b8fd61b0ab8d35b28a3327",
+  "21352c9271aa9a554e99055e4ec688fa665c40f1",
 ]
 known_crc32 = [
-  "42f7153c",
   "23d75612",
+  "42f7153c",
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "destruction-derby-2- Recompiled"
 memcard_dir = "saves"
 
