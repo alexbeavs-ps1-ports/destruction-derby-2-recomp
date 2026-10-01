@@ -44,6 +44,7 @@ strict = true
 openbios = false
 window_title = "destruction-derby-2- Recompiled"
 memcard_dir = "saves"
+overlay_cache = true
 
 [video]
 renderer = "opengl"
